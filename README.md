@@ -15,6 +15,8 @@ en Postman para probar todos los request que el back acepta, y un ejemplo de cad
 
 Total endpoints: 23
 
+El back también se encuentra desplegado en Heroku: https://powerful-gorge-49138.herokuapp.com/
+
 
 Gracias!
 
