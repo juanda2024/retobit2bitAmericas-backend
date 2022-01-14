@@ -1,0 +1,677 @@
+{
+	"info": {
+		"_postman_id": "0318f632-b99e-423d-b4b3-6caa278fd493",
+		"name": "QA APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PREGUNTAS",
+			"item": [
+				{
+					"name": "PREGUNTAS - buscar preguntas por titulo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"tittle\": \"CómO\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/questions/tittle/",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"questions",
+								"tittle",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PREGUNTAS - crear pregunta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"tittle\": \"¿Cómo ser un gran ingeniero?\",\n        \"detail\": \"vamos a mejorar\",\n        \"creation_date\": \"2022-01-12\",\n        \"user_id\": \"5fa6e8332913a00799fe69e2\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/questions/",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"questions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PREGUNTAS - buscar todas las preguntas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/questions/",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"questions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PREGUNTAS - actualizar detalle pregunta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"detail\": \"Vamos a mejorar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/questions/detail/61e06dc38356aa322c1ec2c9",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"questions",
+								"detail",
+								"61e06dc38356aa322c1ec2c9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PREGUNTAS - añadir respuesta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"61df90a344b6b18c3aab8def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/questions/addAnswer/61e0a3803c79f139408388b0",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"questions",
+								"addAnswer",
+								"61e0a3803c79f139408388b0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PREGUNTAS - actualizar titulo pregunta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tittle\": \"Como ser un mejor ingeniero?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/questions/tittle/61e0a3803c79f139408388b0",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"questions",
+								"tittle",
+								"61e0a3803c79f139408388b0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PREGUNTAS - actualizar solucion pregunta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"solution\": \"61df90a344b6b18c3aab8def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/questions/solution/61e06dc38356aa322c1ec2c9",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"questions",
+								"solution",
+								"61e06dc38356aa322c1ec2c9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PREGUNTAS - buscar pregunta por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/questions/id/61e0a3803c79f139408388b0",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"questions",
+								"id",
+								"61e0a3803c79f139408388b0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PREGUNTAS - eliminar pregunta por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/questions/61e06dc38356aa322c1ec2c9",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"questions",
+								"61e06dc38356aa322c1ec2c9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RESPUESTAS",
+			"item": [
+				{
+					"name": "RESPUESTAS - crear respuesta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"user_id\": \"5fa6e8332913a00799fe69e2\",\n        \"question_id\": \"61e06372f4e23edd36e44dfb\",\n        \"date\": \"2022-01-12\",\n        \"detail\": \"La respuesta es 0\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/answers/",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"answers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESPUESTAS - actualizar detalle respuesta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"detail\": \"Perdon es 1!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/answers/detail/61e0736704801d332308d7de",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"answers",
+								"detail",
+								"61e0736704801d332308d7de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESPUESTAS - buscar respuesta por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/answers/61df90a344b6b18c3aab8def",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"answers",
+								"61df90a344b6b18c3aab8def"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESPUESTAS - eliminar respuesta por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/answers/61e0736704801d332308d7de",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"answers",
+								"61e0736704801d332308d7de"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USUARIOS",
+			"item": [
+				{
+					"name": "USUARIOS - crear usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"email\": \"pruebaPostman@hotmail.com\",\n        \"password\": \"193e5867a547a36735905820788fb0041d9331efab1d8df737819c09dc06b3ef\",\n        \"username\": \"nuevoUsuario\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/users/",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USUARIOS - login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"email\": \"juanda248@hotmail.com\",\n        \"password\": \"$2b$10$rQRXgTtB2ae9QJ4lkKjSNecTZbmWeNrFuAgV7CiPNv3uG2p4xwc/O\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/users/login/",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USUARIOS - actualizar contraseña",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"1c3f7c72f72ba13a1da283b936b5a7e68fa7a2de28913e37e105702518dc39b6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/users/password/61e07650f80ed3343e44e9b7",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"password",
+								"61e07650f80ed3343e44e9b7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USUARIOS - añadir pregunta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"61df90a344b6b18c3aab8def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/users/addAnswer/61e07523f4e23edd36e44dfc",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"addAnswer",
+								"61e07523f4e23edd36e44dfc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USUARIOS - añadir respuesta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"61e0a3803c79f139408388b0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/users/addQuestion/61e07523f4e23edd36e44dfc",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"addQuestion",
+								"61e07523f4e23edd36e44dfc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USUARIOS - actualizar email",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"yonosemañana@hotmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/users/email/61e07650f80ed3343e44e9b7",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"email",
+								"61e07650f80ed3343e44e9b7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USUARIOS - actualizar username",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"pepito2420\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/users/username/61e07650f80ed3343e44e9b7",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"username",
+								"61e07650f80ed3343e44e9b7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USUARIOS - buscar usuario por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/users/id/61e07523f4e23edd36e44dfc",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"id",
+								"61e07523f4e23edd36e44dfc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USUARIOS - buscar usuario por email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/users/email/prueba@hotmail.com",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"email",
+								"prueba@hotmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USUARIOS - eliminar usuario por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://powerful-gorge-49138.herokuapp.com/users/61e07650f80ed3343e44e9b7",
+							"protocol": "https",
+							"host": [
+								"powerful-gorge-49138",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"61e07650f80ed3343e44e9b7"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
