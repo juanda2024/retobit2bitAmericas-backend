@@ -21,6 +21,13 @@ const password_dto = Joi.object({
         .required()
 });
 
+const login_dto = Joi.object({
+    email: Joi.string()
+    .required(),
+    password: Joi.string()
+        .required()
+});
+
 const email_dto = Joi.object({
     email: Joi.string()
         .required()
@@ -59,6 +66,42 @@ router.get('/email/:email', async function (req, res, next) {
         }
         res.status(200).send(result);
     });
+});
+
+/* POST user: login with information given as a JSON */
+router.post('/login', async function (req, res, next) {
+    const { error } = login_dto.validate
+        ({
+            email: req.body.email,
+            password: req.body.password
+        });
+
+    if (error) {
+        return res.status(400).send({ mensaje: error });
+    }
+    else {
+        var bool = true;
+        var hash_password = '';
+        var token = '';
+        var verificacion = await getUserByEmail(req.body.email).then((result) => {
+            if (result === null || result[0] == null) {
+                bool = false;
+                return res.status(404).send("The user with the given email was not found.");
+            }
+            else{
+                hash_password = result[0]? result[0].password: '';
+                token = result[0]? result[0]._id : '';
+            }
+        });
+        if (bool == true) {
+            if(hash_password === req.body.password){
+                res.status(200).send({ message: "User logged succesfully. Token:" +  token});
+            }
+            else{
+                res.status(215).send({ message: "The password is incorrect" });
+            }
+        }
+    }
 });
 
 /* POST user: with information as a JSON */
