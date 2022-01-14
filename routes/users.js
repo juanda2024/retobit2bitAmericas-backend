@@ -86,7 +86,7 @@ router.post('/login', async function (req, res, next) {
         var verificacion = await getUserByEmail(req.body.email).then((result) => {
             if (result === null || result[0] == null) {
                 bool = false;
-                return res.status(404).send("The user with the given email was not found.");
+                return res.status(404).send({ message: "The user with the given email was not found."});
             }
             else{
                 hash_password = result[0]? result[0].password: '';
@@ -138,7 +138,7 @@ router.put('/password/:id', async function (req, res, next) {
     var verificacion = await getUserById(req.params.id).then((result) => {
         if (result === null || result[0] == null) {
             bool = false;
-            return res.status(404).send("The user with the given id was not found.");
+            return res.status(404).send({ message: "The user with the given id was not found."});
 
         }
     });
@@ -167,7 +167,7 @@ router.put('/email/:id', async function (req, res, next) {
     var verificacion = await getUserById(req.params.id).then((result) => {
         if (result === null || result[0] == null) {
             bool = false;
-            return res.status(404).send("The user with the given id was not found.");
+            return res.status(404).send({ message: "The user with the given id was not found."});
 
         }
     });
@@ -196,7 +196,7 @@ router.put('/username/:id', async function (req, res, next) {
     var verificacion = await getUserById(req.params.id).then((result) => {
         if (result === null || result[0] == null) {
             bool = false;
-            return res.status(404).send("The user with the given id was not found.");
+            return res.status(404).send({ message: "The user with the given id was not found."});
 
         }
     });
@@ -225,7 +225,7 @@ router.put('/addAnswer/:id', async function (req, res, next) {
     var verificacion = await getUserById(req.params.id).then((result) => {
         if (result === null || result[0] == null) {
             bool = false;
-            return res.status(404).send("The user with that id was not found.");
+            return res.status(404).send({ message: "The user with the given id was not found."});
 
         }
     });
@@ -254,7 +254,7 @@ router.put('/addQuestion/:id', async function (req, res, next) {
     var verificacion = await getUserById(req.params.id).then((result) => {
         if (result === null || result[0] == null) {
             bool = false;
-            return res.status(404).send("The user with that id was not found.");
+            return res.status(404).send({ message: "The user with the given id was not found."});
 
         }
     });

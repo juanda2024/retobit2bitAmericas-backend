@@ -71,7 +71,7 @@ router.put('/detail/:id', async function (req, res, next) {
     var verificacion = await getAnswer(req.params.id).then((result) => {
         if (result === null || result[0] == null) {
             bool = false;
-            return res.status(404).send("The answer with that id was not found.");
+            return res.status(404).send({ message: "The answer with that id was not found."});
 
         }
     });

@@ -120,7 +120,7 @@ router.put('/detail/:id', async function (req, res, next) {
     var verificacion = await getQuestion(req.params.id).then((result) => {
         if (result === null || result[0] == null) {
             bool = false;
-            return res.status(404).send("The question with that id was not found.");
+            return res.status(404).send({ message: "The question with that id was not found."});
 
         }
     });
@@ -149,7 +149,7 @@ router.put('/addAnswer/:id', async function (req, res, next) {
     var verificacion = await getQuestion(req.params.id).then((result) => {
         if (result === null || result[0] == null) {
             bool = false;
-            return res.status(404).send("The question with that id was not found.");
+            return res.status(404).send({ message: "The question with that id was not found."});
 
         }
     });
@@ -178,7 +178,7 @@ router.put('/tittle/:id', async function (req, res, next) {
     var verificacion = await getQuestion(req.params.id).then((result) => {
         if (result === null || result[0] == null) {
             bool = false;
-            return res.status(404).send("The question with that id was not found.");
+            return res.status(404).send({ message: "The question with that id was not found."});
 
         }
     });
@@ -207,7 +207,7 @@ router.put('/solution/:id', async function (req, res, next) {
     var verificacion = await getQuestion(req.params.id).then((result) => {
         if (result === null || result[0] == null) {
             bool = false;
-            return res.status(404).send("The question with that id was not found.");
+            return res.status(404).send({ message: "The question with that id was not found."});
 
         }
     });
